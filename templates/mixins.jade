@@ -47,8 +47,7 @@ mixin Nav()
                     each resource in resourceGroup.resources || []
                       li
                           if !self.condenseNav || (resource.actions.length != 1)
-                              a(href=resource.elementLink)!= resource.name || 'Resource'
-                              ul: each action in resource.actions || []
+                              each action in resource.actions || []
                                   li: a(href=action.elementLink)
                                     +Badge(action.method)
                                     != action.name || action.method + ' ' + (action.attributes && action.attributes.uriTemplate || resource.uriTemplate)
