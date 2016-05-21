@@ -156,7 +156,7 @@ function autoCollapse() {
     return a.parentNode.offsetHeight - b.parentNode.offsetHeight;
   });
 
-  while (sortedItems.length && itemsHeight > windowHeight) {
+  while (sortedItems.length) {
     for (var i = 0; i < sortedItems.length; i++) {
       // Will collapsing this item help?
       var itemHeight = sortedItems[i].nextSibling.offsetHeight;
